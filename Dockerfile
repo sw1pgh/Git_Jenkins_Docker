@@ -1,4 +1,4 @@
 FROM openjdk
-COPY target/*.jar /
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/my-app-1.0-SNAPSHOT.jar"]
+ADD target/devops-integration.jar devops-integration.jar
+ENTRYPOINT ["java","-jar","/devops-integration.jar"]
